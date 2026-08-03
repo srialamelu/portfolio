@@ -4,11 +4,14 @@ A single-page portfolio site built with plain HTML, CSS and JavaScript (no build
 
 ## Structure
 
+Flat layout on purpose — GitHub's drag-and-drop web upload doesn't reliably preserve
+subfolders (especially in Safari), so everything lives at the repo root:
+
 ```
-index.html              Page content
-assets/css/styles.css   All styling
-assets/js/script.js     Scroll reveal, mobile nav, header state
-assets/img/profile.jpg  Profile photo
+index.html    Page content
+styles.css    All styling
+script.js     Scroll reveal, mobile nav, header state, contact form submit
+profile.jpg   Profile photo
 ```
 
 ## Run locally
@@ -23,27 +26,35 @@ Then visit `http://localhost:8000`.
 
 ## Publish with GitHub Pages
 
-Git is already initialized locally with an initial commit. To get the site live at
-`https://srialamelumangai.github.io`:
+Your GitHub username is `srialamelu`, so the repo must be named exactly `srialamelu.github.io`
+to get the clean root URL `https://srialamelu.github.io`.
 
-1. On GitHub, create a new **public** repository named exactly `srialamelumangai.github.io`
-   (this special name is what makes GitHub serve it at the root domain instead of
-   `srialamelumangai.github.io/<repo-name>`). Do not initialize it with a README.
+### Option A — web upload (no terminal)
 
-2. Push this local repo to it:
+1. On GitHub, create a **public** repository named exactly `srialamelu.github.io`. Don't
+   initialize it with a README.
+2. On the empty repo page, click **"uploading an existing file"**.
+3. Drag in `index.html`, `styles.css`, `script.js`, `profile.jpg`, and `README.md` — as
+   individual files, not a folder, so nothing gets nested.
+4. Commit directly to `main`.
+5. Go to **Settings → Pages**, set Source to the `main` branch and `/ (root)` folder, **Save**.
+6. Site goes live at `https://srialamelu.github.io` within a minute or two.
 
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/srialamelumangai/srialamelumangai.github.io.git
-   git push -u origin main
-   ```
+### Option B — git push
 
-3. On GitHub, go to **Settings → Pages**.
-4. Under **Source**, select the `main` branch and `/ (root)` folder, then **Save**.
-5. The site goes live at `https://srialamelumangai.github.io` within a minute or two.
+Git is already initialized locally with commit history. To push:
+
+```bash
+git remote set-url origin https://github.com/srialamelu/srialamelu.github.io.git
+git push -u origin main
+```
+
+(If the repo doesn't exist yet on GitHub, create it first as in step 1 above.)
 
 For any future edit: commit and `git push`, and Pages redeploys automatically.
 
 ## Editing content
 
-All text lives directly in `index.html`, organized into clearly labeled `<section>` blocks (About, Experience, Education, Training, Certifications, Publications, Skills, Contact). Colors and spacing are controlled by CSS variables at the top of `assets/css/styles.css`.
+All text lives directly in `index.html`, organized into clearly labeled `<section>` blocks
+(About, Experience, Education, Training, Certifications, Publications, Skills, Contact).
+Colors and spacing are controlled by CSS variables at the top of `styles.css`.
