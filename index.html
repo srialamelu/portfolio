@@ -5,20 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srialamelumangai Mathivanan — Business Analyst</title>
 <meta name="description" content="Srialamelumangai Mathivanan — Business Analyst specializing in Power BI, SQL, Smartsheet and KPI reporting. International experience across GE Aerospace, TCS and Nielsen. Also building practical toolkits for founders — see Products.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0e14'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia,serif' fill='%23c9a961' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234338CA'/%3E%3Ctext x='50' y='66' font-size='48' font-family='Arial,sans-serif' font-weight='700' fill='%23FAF8F3' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="noise-overlay"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- ===== NAV ===== -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="#top" class="brand">SM<span class="brand-dot">.</span></a>
+    <a href="#top" class="brand">
+      <span class="brand-avatar"><img src="profile.jpg" alt="Srialamelumangai Mathivanan"></span>
+      <span class="brand-text">
+        <span class="brand-name">Srialamelu M.</span>
+        <span class="brand-role">Business Analyst</span>
+      </span>
+    </a>
     <nav class="main-nav" id="mainNav">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -53,15 +60,18 @@
 
   <div class="container hero-inner" id="about">
     <div class="hero-text reveal">
-      <p class="eyebrow">Business Analyst · KPI &amp; Data Reporting Specialist</p>
-      <h1 class="gradient-text">Srialamelumangai<br>Mathivanan</h1>
+      <p class="eyebrow">Business Analyst · KPI &amp; Data Reporting</p>
+      <h1>I turn messy data into<br><em class="gradient-text">decisions that move faster.</em></h1>
       <p class="hero-lede">
-        I turn messy, disconnected data into dashboards that executives actually trust —
-        and decisions that move faster. Over 6+ years across engineering, operations and
-        analytics — first in global retail, then in aerospace — building the reporting
-        infrastructure that keeps cross-functional teams aligned across time zones.
+        Srialamelumangai Mathivanan — 6+ years across engineering, operations and analytics,
+        first in global retail, then in aerospace, building the dashboards and reporting
+        systems that keep cross-functional teams aligned across time zones.
       </p>
-      <p class="hero-meta">Thanjavur, Tamil Nadu, India · Open to Relocation · Immediate Joiner</p>
+      <div class="status-row">
+        <span class="status-chip"><span class="status-dot"></span>Currently: Business Analyst, Genpact</span>
+        <span class="status-chip">Open to sponsored roles — UK &amp; Australia</span>
+        <span class="status-chip">Thanjavur, Tamil Nadu, India</span>
+      </div>
 
       <div class="hero-actions">
         <a href="mailto:sam.mathi95@gmail.com" class="btn btn-primary">
@@ -81,11 +91,21 @@
 
     <div class="hero-photo reveal">
       <div class="photo-frame">
-        <img src="profile.jpg" alt="Portrait of Srialamelumangai Mathivanan">
+        <img src="hero-photo.jpg" alt="Portrait of Srialamelumangai Mathivanan">
       </div>
-      <div class="photo-badge">
-        <strong>6+</strong>
-        <span>Years international<br>experience</span>
+      <div class="hero-float-cards">
+        <div class="float-card float-card-a">
+          <strong>88+</strong>
+          <span>Projects delivered</span>
+        </div>
+        <div class="float-card float-card-b">
+          <strong>10+</strong>
+          <span>Dashboards built</span>
+        </div>
+        <div class="float-card float-card-c">
+          <strong>6+</strong>
+          <span>Years experience</span>
+        </div>
       </div>
     </div>
   </div>
@@ -102,6 +122,23 @@
     </div>
 
     <div class="timeline">
+
+      <article class="timeline-item reveal">
+        <div class="timeline-marker timeline-marker-current"></div>
+        <div class="timeline-card timeline-card-current">
+          <div class="tc-head">
+            <div>
+              <h3>Business Analyst Consultant <span class="pill pill-current">Current</span></h3>
+              <p class="tc-org">Genpact <span class="tc-client">· Client: GE Aerospace</span></p>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-date">Aug 2026 – Present</span>
+              <span class="tc-loc">Bangalore, India</span>
+            </div>
+          </div>
+          <p class="tc-summary">Bringing the same KPI reporting, dashboarding and stakeholder-alignment approach developed during the Cardiff engagement to a new GE Aerospace workstream, now based out of Genpact's Bangalore team.</p>
+        </div>
+      </article>
 
       <article class="timeline-item reveal">
         <div class="timeline-marker"></div>
@@ -360,18 +397,22 @@
 
     <div class="skills-grid reveal">
       <div class="skill-group">
+        <span class="skill-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></span>
         <h4>Data Analysis &amp; Reporting</h4>
         <p>Advanced Excel (Pivot Tables, Power Query, XLOOKUP), SQL, Power BI, Tableau, TIBCO Spotfire, SAP</p>
       </div>
       <div class="skill-group">
+        <span class="skill-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
         <h4>Business Analysis</h4>
         <p>Requirements Gathering, Stakeholder Management, Process Mapping, Gap Analysis, KPI Tracking, Risk &amp; Issue Management</p>
       </div>
       <div class="skill-group">
+        <span class="skill-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
         <h4>Tools &amp; Collaboration</h4>
         <p>Smartsheet (Dashboards &amp; Automation), Confluence, JIRA, Miro, Visio, Agile/Scrum</p>
       </div>
       <div class="skill-group">
+        <span class="skill-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
         <h4>Domain &amp; Operations</h4>
         <p>Aerospace &amp; MRO, NPI Lifecycle, Project Tracking, Workflow Automation, Continuous Improvement (Lean)</p>
       </div>

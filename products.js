@@ -20,7 +20,7 @@ const PRODUCTS = [
       "Use before you write a business plan"
     ],
     cta: "Get it free",
-    url: "https://2618153416461.gumroad.com/l/startupdecisionworkbook"
+    url: "https://alamelumangai.gumroad.com/l/startupdecisionworkbook"
   },
   {
     id: "zero-cost-business-startup-guide",
@@ -29,6 +29,7 @@ const PRODUCTS = [
     title: "Zero-Cost Business Startup Guide",
     price: "$3",
     priceNote: "Pay what you want, from $3",
+    compare: "Less than a dinner out. Less than a movie ticket.",
     badge: "Best value",
     description: "10+ free and low-cost tools to get a real business live: domain, email, logo, LinkedIn presence, content creation, scheduling and more. The exact stack used to help launch a business at zero cost.",
     features: [
@@ -37,7 +38,7 @@ const PRODUCTS = [
       "Built from a real $0-budget launch"
     ],
     cta: "Get the guide",
-    url: "https://2618153416461.gumroad.com/l/zerocostbusinessguide"
+    url: "https://alamelumangai.gumroad.com/l/zerocostbusinessguide"
   }
 ];
 
@@ -58,6 +59,7 @@ function renderProducts() {
           <span>${p.priceNote}</span>
         </div>
       </div>
+      ${p.compare ? `<p class="prod-compare">${p.compare}</p>` : ""}
       <h3>${p.title}</h3>
       <p class="prod-card-desc">${p.description}</p>
       <ul class="prod-features">

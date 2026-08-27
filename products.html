@@ -5,20 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products — Srialamelumangai Mathivanan</title>
 <meta name="description" content="Practical, low-cost toolkits for founders and small teams — built by a business analyst who spends her days turning complexity into clear decisions. Instant PDF downloads on Gumroad.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0e14'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia,serif' fill='%23c9a961' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234338CA'/%3E%3Ctext x='50' y='66' font-size='48' font-family='Arial,sans-serif' font-weight='700' fill='%23FAF8F3' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="noise-overlay"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- ===== NAV ===== -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="index.html#top" class="brand">SM<span class="brand-dot">.</span></a>
+    <a href="index.html#top" class="brand">
+      <span class="brand-avatar"><img src="profile.jpg" alt="Srialamelumangai Mathivanan"></span>
+      <span class="brand-text">
+        <span class="brand-name">Srialamelu M.</span>
+        <span class="brand-role">Business Analyst</span>
+      </span>
+    </a>
     <nav class="main-nav" id="mainNav">
       <a href="index.html#about">About</a>
       <a href="index.html#experience">Experience</a>
@@ -120,7 +127,7 @@
       </div>
       <div class="trust-item">
         <h4>Pay what you can</h4>
-        <p>The workbook is free. The guide starts at $3. If money is tight right now, the free workbook covers the most important decisions.</p>
+        <p>The workbook is free. The guide starts at $3 — less than a dinner out, less than a movie ticket. If money is tight right now, the free workbook covers the most important decisions.</p>
       </div>
     </div>
   </div>
@@ -164,7 +171,7 @@
   <div class="container prod-cta-band reveal">
     <h2>More tools are coming.</h2>
     <p>Follow the store to get notified the moment a new one launches — no spam, just new tools.</p>
-    <a href="https://2618153416461.gumroad.com/" target="_blank" rel="noopener" class="btn btn-primary">
+    <a href="https://alamelumangai.gumroad.com/" target="_blank" rel="noopener" class="btn btn-primary">
       Follow on Gumroad
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -177,12 +184,21 @@
     <div class="simple-footer-links">
       <a href="index.html#top">Portfolio</a>
       <a href="index.html#contact">Contact</a>
-      <a href="https://2618153416461.gumroad.com/" target="_blank" rel="noopener">Gumroad store ↗</a>
+      <a href="https://alamelumangai.gumroad.com/" target="_blank" rel="noopener">Gumroad store ↗</a>
       <a href="https://www.linkedin.com/in/srialamelumangai" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
     <p class="simple-footer-copy">© <span id="year"></span> Srialamelumangai Mathivanan.</p>
   </div>
 </footer>
+
+<!-- ===== STICKY CONVERSION BAR ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <span class="sticky-cta-label">Ready to start?</span>
+    <a href="https://alamelumangai.gumroad.com/l/startupdecisionworkbook" target="_blank" rel="noopener" class="btn btn-outline sticky-cta-btn">Free workbook</a>
+    <a href="https://alamelumangai.gumroad.com/l/zerocostbusinessguide" target="_blank" rel="noopener" class="btn btn-primary sticky-cta-btn">Get the guide →</a>
+  </div>
+</div>
 
 <script src="script.js"></script>
 <script src="products.js"></script>

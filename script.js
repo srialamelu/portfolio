@@ -8,6 +8,29 @@ const onScroll = () => {
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
+// Top scroll-progress bar
+const scrollProgress = document.getElementById('scrollProgress');
+if (scrollProgress) {
+  const updateProgress = () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + '%';
+  };
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+}
+
+// Sticky conversion bar (products page only)
+const stickyCta = document.getElementById('stickyCta');
+if (stickyCta) {
+  const toggleSticky = () => {
+    stickyCta.classList.toggle('visible', window.scrollY > 620);
+  };
+  toggleSticky();
+  window.addEventListener('scroll', toggleSticky, { passive: true });
+}
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');

@@ -12,10 +12,19 @@ subfolders (especially in Safari), so everything lives at the repo root:
 index.html      Resume / portfolio page content
 products.html   Products page (Startup Decision Workbook, Zero-Cost Business Startup Guide)
 styles.css      All styling for both pages
-script.js       Scroll reveal, mobile nav, header state, contact form submit
+script.js       Scroll reveal, mobile nav, header state, contact form submit, scroll progress bar, sticky CTA
 products.js     Product data + card rendering for products.html
-profile.jpg     Profile photo
+profile.jpg     Small circular nav photo
+hero-photo.jpg  Main hero photo on index.html, with floating stat cards over it
 ```
+
+### Design system
+
+Light, editorial theme: cream background (`--bg`), near-black text, and an indigo → violet →
+rose → amber gradient (`--gradient-brand`) used sparingly for accents, the headline highlight
+phrase, and card badges. Headings use **Sora** (bold, geometric), body text uses **Inter**, and
+a few tag-style details (skill chips, dates, eyebrow labels) use **JetBrains Mono** for a
+"built by hand" feel. All three are loaded from Google Fonts in the `<head>` of both pages.
 
 ### Adding a new product later
 
@@ -43,10 +52,9 @@ repository named `portfolio` on GitHub (a project page, not the root `username.g
 
 1. Go to your `portfolio` repository on GitHub.
 2. Click **"Add file" → "Upload files"**.
-3. Drag in the updated `index.html`, `styles.css`, `script.js`, `README.md`, plus the two new
-   files `products.html` and `products.js` — as individual files, not a folder.
-4. GitHub will warn that `index.html`, `styles.css`, `script.js` and `README.md` already exist —
-   confirm the replace/overwrite for each.
+3. Drag in all 8 files — `index.html`, `styles.css`, `script.js`, `products.html`, `products.js`,
+   `profile.jpg`, `hero-photo.jpg`, `README.md` — as individual files, not a folder.
+4. GitHub will warn that some files already exist — confirm the replace/overwrite for each.
 5. Commit directly to `main`.
 6. The site redeploys automatically within a minute or two at the same URL, and
    `https://srialamelu.github.io/portfolio/products.html` goes live as the new Products page.
@@ -56,8 +64,8 @@ repository named `portfolio` on GitHub (a project page, not the root `username.g
 If you have the repo cloned locally with git already set up:
 
 ```bash
-git add index.html styles.css script.js products.html products.js README.md
-git commit -m "Add Products page"
+git add index.html styles.css script.js products.html products.js profile.jpg hero-photo.jpg README.md
+git commit -m "Visual refresh + Products page"
 git push
 ```
 
