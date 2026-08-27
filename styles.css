@@ -756,13 +756,17 @@ h1, h2, h3 {
 .pub-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
   background: var(--dark-panel);
   border: 1px solid var(--dark-line);
   border-radius: var(--radius);
   padding: 26px 30px;
   transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+.pub-text {
+  flex: 1;
+  min-width: 0;
 }
 a.pub-card:hover {
   border-color: rgba(108,92,231,0.4);
