@@ -12,6 +12,7 @@ const PRODUCTS = [
     title: "Startup Decision Workbook",
     price: "$0",
     priceNote: "Pay what you want",
+    compare: "Free. No card, no catch, nothing to lose.",
     badge: "Most downloaded",
     description: "16 structured questions that walk you through the decisions every founder has to make before spending a rupee, dollar or pound: what to build, who it is for, and whether it is worth doing at all.",
     features: [

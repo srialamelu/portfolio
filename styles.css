@@ -376,57 +376,34 @@ h1, h2, h3 {
   object-fit: cover;
 }
 .photo-stats {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background: var(--dark-panel);
   border: 1px solid var(--dark-line);
   border-radius: 0 0 22px 22px;
   box-shadow: 0 30px 60px -24px rgba(0,0,0,0.55);
 }
 .photo-stat {
-  flex: 1;
   text-align: center;
-  padding: 18px 8px;
+  padding: 16px 6px;
   border-right: 1px solid var(--dark-line);
 }
 .photo-stat:last-child { border-right: none; }
 .photo-stat strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 21px;
+  font-size: 18px;
   background: var(--gradient-brand);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .photo-stat span {
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.scroll-cue {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin-top: 64px;
-}
-.scroll-cue span {
-  width: 1px; height: 46px;
-  background: linear-gradient(var(--accent), transparent);
-  display: block;
-  position: relative;
-}
-.scroll-cue span::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
 }
 
 /* ================= SECTIONS ================= */
@@ -576,14 +553,32 @@ h1, h2, h3 {
   gap: 24px;
 }
 .edu-card {
+  position: relative;
   background: var(--dark-panel);
   border: 1px solid var(--dark-line);
   border-radius: var(--radius);
-  padding: 30px 32px;
+  padding: 32px 32px 28px;
   overflow: hidden;
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
+.edu-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gradient-brand);
+}
 .edu-card:hover { border-color: rgba(108,92,231,0.4); transform: translateY(-2px); }
+.edu-icon {
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
 .edu-card-top {
   display: flex;
   justify-content: space-between;
@@ -633,15 +628,33 @@ h1, h2, h3 {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 40px;
-  padding-top: 36px;
-  border-top: 1px solid var(--dark-line);
+}
+.honors-col {
+  position: relative;
+  background: linear-gradient(180deg, rgba(224,145,63,0.09), var(--dark-panel) 60%);
+  border: 1px solid rgba(224,145,63,0.3);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.honors-col:hover { border-color: rgba(224,145,63,0.55); transform: translateY(-2px); }
+.honors-icon {
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: var(--amber-soft);
+  color: var(--amber);
 }
 .honors-col h4 {
   font-family: var(--font-body);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--dark-ink);
   margin: 0 0 14px;
 }
 .honors-col ul {
@@ -651,7 +664,7 @@ h1, h2, h3 {
   font-size: 14.5px;
 }
 .honors-col li { margin-bottom: 8px; }
-.honors-col li::marker { color: var(--accent); }
+.honors-col li::marker { color: var(--amber); }
 
 /* ---------- Training ---------- */
 .train-card {
@@ -663,13 +676,29 @@ h1, h2, h3 {
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .train-card:hover { border-color: rgba(108,92,231,0.4); transform: translateY(-2px); }
+.train-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.train-icon {
+  width: 32px; height: 32px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
 .train-date {
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
   color: var(--amber);
   letter-spacing: 0.02em;
-  margin: 0 0 10px;
+  margin: 0;
 }
 .train-card h3 {
   font-size: 19px;
@@ -708,8 +737,13 @@ h1, h2, h3 {
   transform: translateY(-2px);
 }
 .cert-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--amber);
-  font-size: 11px;
+  background: var(--amber-soft);
   flex-shrink: 0;
 }
 
@@ -734,6 +768,16 @@ a.pub-card:hover {
   border-color: rgba(108,92,231,0.4);
   transform: translateY(-2px);
   background: var(--accent-soft);
+}
+.pub-icon {
+  width: 38px; height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 .pub-card h3 {
   font-size: 17px;
@@ -913,6 +957,30 @@ a.pub-card:hover {
 }
 
 /* ================= PRODUCTS TEASER (index.html) ================= */
+.products-teaser-highlight {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(224,145,63,0.25);
+  border-bottom: 1px solid rgba(224,145,63,0.25);
+}
+.teaser-glow {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+.teaser-glow-a {
+  top: -180px; left: -120px;
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(224,145,63,0.16), transparent 70%);
+}
+.teaser-glow-b {
+  bottom: -200px; right: -100px;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(108,92,231,0.16), transparent 70%);
+}
+.products-teaser-highlight .container { position: relative; z-index: 1; }
 .teaser-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1199,6 +1267,85 @@ a.pub-card:hover {
 .prod-card-coming h3 { font-size: 19px; margin-bottom: 8px; }
 .prod-card-coming p { color: var(--muted); font-size: 14px; margin: 0; }
 
+/* ---------- Services (custom design work) ---------- */
+.service-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(224,145,63,0.09), var(--dark-panel) 55%);
+  border: 1px solid rgba(224,145,63,0.35);
+  border-radius: var(--radius);
+  padding: 36px 36px 32px;
+  overflow: hidden;
+  max-width: 760px;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gradient-brand);
+}
+.service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.service-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-soft);
+  border: 1px solid rgba(224,145,63,0.35);
+  padding: 6px 13px;
+  border-radius: 999px;
+}
+.service-price { text-align: right; }
+.service-price strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--dark-ink);
+  line-height: 1;
+}
+.service-price span { font-size: 11.5px; color: var(--muted); }
+.service-card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+.service-desc {
+  color: var(--dark-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 26px;
+  max-width: 620px;
+}
+.service-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 22px 0;
+  margin-bottom: 26px;
+  border-top: 1px solid var(--dark-line);
+  border-bottom: 1px solid var(--dark-line);
+}
+.service-meta strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--amber);
+}
+.service-meta span {
+  font-size: 11.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 /* ---------- Trust row ---------- */
 .trust-grid {
   display: grid;
@@ -1404,4 +1551,13 @@ a.pub-card:hover {
   .prod-card-top { padding-right: 0; flex-wrap: wrap; }
   .prod-badge { position: static; display: inline-block; margin-bottom: 10px; }
   .prod-cta-band h2 { font-size: 24px; }
+
+  .photo-stats { grid-template-columns: repeat(2, 1fr); }
+  .photo-stat { border-right: 1px solid var(--dark-line); border-bottom: 1px solid var(--dark-line); }
+  .photo-stat:nth-child(2n) { border-right: none; }
+  .photo-stat:nth-child(n+3) { border-bottom: none; }
+
+  .service-card { padding: 24px; }
+  .service-price { text-align: left; }
+  .service-meta-row { gap: 20px; }
 }
