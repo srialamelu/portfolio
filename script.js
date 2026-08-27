@@ -75,7 +75,7 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        formStatus.textContent = "Thanks — I'll be in touch shortly.";
+        formStatus.textContent = "Thanks, I'll be in touch shortly.";
         formStatus.className = 'form-status is-success';
         contactForm.reset();
       } else {
