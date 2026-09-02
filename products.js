@@ -40,6 +40,24 @@ const PRODUCTS = [
     ],
     cta: "Get the guide",
     url: "https://alamelumangai.gumroad.com/l/zerocostbusinessguide"
+  },
+  {
+    id: "quickdash",
+    tag: "Dashboard Tool",
+    format: "Browser-based · Single file",
+    title: "QuickDash",
+    price: "$9.99",
+    priceNote: "One-time purchase",
+    compare: "Less than an hour of freelance dashboard work.",
+    badge: "New",
+    description: "Drop in an Excel or CSV file and get KPI cards, category, distribution and trend charts in seconds, no formulas or manual chart-building. Runs entirely in your browser, so nothing is ever uploaded.",
+    features: [
+      "Auto-generates KPI cards & charts",
+      "100% local, your data never leaves your browser",
+      "Export the finished dashboard as PNG"
+    ],
+    cta: "Get QuickDash",
+    url: "https://alamelumangai.gumroad.com/l/okfnjg"
   }
 ];
 
@@ -73,15 +91,7 @@ function renderProducts() {
     </article>
   `).join("");
 
-  const comingSoon = `
-    <article class="prod-card prod-card-coming">
-      <div class="prod-coming-icon" aria-hidden="true">＋</div>
-      <h3>More tools launching soon</h3>
-      <p>The next toolkit is in the works. Check back, or follow the store for a heads-up the day it goes live.</p>
-    </article>
-  `;
-
-  grid.innerHTML = cards + comingSoon;
+  grid.innerHTML = cards;
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
